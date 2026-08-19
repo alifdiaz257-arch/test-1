@@ -1,0 +1,1 @@
+'use client';import {useEffect,useState} from 'react';export function useRepositories(){const[repositories,setRepositories]=useState<any[]>([]);useEffect(()=>{fetch('/api/github/repos').then(r=>r.json()).then(x=>Array.isArray(x)&&setRepositories(x))},[]);return{repositories}}
