@@ -1,0 +1,1 @@
+'use client';export const BranchSelector=({branches,value,onChange}:any)=><select className='input' value={value} onChange={e=>onChange(e.target.value)}>{branches.map((b:any)=><option key={b.name}>{b.name}</option>)}</select>;
