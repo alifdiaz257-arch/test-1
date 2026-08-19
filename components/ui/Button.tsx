@@ -1,0 +1,1 @@
+'use client';import type {ButtonHTMLAttributes} from 'react';export function Button({children,className='',variant='primary',...p}:ButtonHTMLAttributes<HTMLButtonElement>&{variant?:string}){return <button {...p} className={`btn btn-${variant} ${className}`}>{children}</button>}
