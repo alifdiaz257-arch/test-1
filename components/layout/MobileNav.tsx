@@ -1,0 +1,1 @@
+import Link from 'next/link';import {navigation} from '@/config/navigation';export function MobileNav(){return <nav className='mobile-nav'>{navigation.map(([l,h,i])=><Link key={h} href={h}>{i}</Link>)}</nav>}
