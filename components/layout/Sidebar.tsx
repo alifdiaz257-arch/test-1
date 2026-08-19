@@ -1,0 +1,1 @@
+import Link from 'next/link';import {navigation} from '@/config/navigation';export function Sidebar(){return <aside className='sidebar'>{navigation.map(([l,h,i])=><Link key={h} href={h}><span>{i}</span>{l}</Link>)}</aside>}
