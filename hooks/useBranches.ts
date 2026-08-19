@@ -1,0 +1,1 @@
+'use client';import {useEffect,useState} from 'react';export function useBranches(o:string,r:string){const[d,setD]=useState<any[]>([]);useEffect(()=>{if(o&&r)fetch(`/api/github/repo/branches?owner=${o}&repo=${r}`).then(x=>x.json()).then(setD)},[o,r]);return d}
