@@ -1,0 +1,1 @@
+'use client';export const RepoSelector=({repos,value,onChange}:any)=><select className='input' value={value} onChange={e=>onChange(e.target.value)}><option value=''>Select repository</option>{repos.map((r:any)=><option key={r.id}>{r.full_name}</option>)}</select>;
