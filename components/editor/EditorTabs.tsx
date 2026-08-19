@@ -1,0 +1,1 @@
+'use client';export function EditorTabs({tabs,active,onSelect,onClose}:any){return <div className='tabs'>{tabs.map((t:any)=><button className={active===t.path?'tab active':'tab'} key={t.path} onClick={()=>onSelect(t.path)}>{t.dirty?'● ':''}{t.name}<i onClick={e=>{e.stopPropagation();onClose(t.path)}}>×</i></button>)}</div>}
