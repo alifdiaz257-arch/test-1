@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {githubAuthorizeUrl} from '@/lib/auth/oauth';export async function GET(){const state=crypto.randomUUID();const r=NextResponse.redirect(githubAuthorizeUrl(state));r.cookies.set('github_oauth_state',state,{httpOnly:true,sameSite:'lax',secure:process.env.NODE_ENV==='production',maxAge:600,path:'/'});return r;}
