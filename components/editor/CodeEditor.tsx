@@ -1,0 +1,1 @@
+'use client';import {useEffect,useState} from 'react';export function CodeEditor({content,onChange}:any){const[v,setV]=useState(content||'');useEffect(()=>setV(content||''),[content]);return <textarea spellCheck={false} className='code-editor' value={v} onChange={e=>{setV(e.target.value);onChange?.(e.target.value)}}/>}
