@@ -1,0 +1,1 @@
+import {GitHubLogin} from '@/components/github/GitHubLogin';export default function Login(){return <main className='auth'><div className='auth-card'><div className='brand big'><span className='brand-mark'>B</span>BlueGit</div><h1>Sign in</h1><p>Connect GitHub to manage your repositories.</p><GitHubLogin/></div></main>}
