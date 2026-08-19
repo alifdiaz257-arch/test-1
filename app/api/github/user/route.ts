@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {githubFetch} from '@/lib/github/server';export async function GET(){try{return NextResponse.json(await githubFetch('/user'))}catch(e:any){return NextResponse.json({error:e.message},{status:401})}}
