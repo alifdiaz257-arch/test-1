@@ -1,0 +1,1 @@
+import {Modal} from '../ui/Modal';export const DeleteFileDialog=({open,onClose,onDelete,path}:any)=><Modal open={open} onClose={onClose} title='Delete file'><p>Delete {path}?</p><button className='btn btn-danger' onClick={onDelete}>Delete permanently</button></Modal>;
