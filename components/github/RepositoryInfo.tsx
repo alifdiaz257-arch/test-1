@@ -1,0 +1,1 @@
+export function RepositoryInfo({repo}:any){return <div className='panel'><h2>{repo.full_name}</h2><p>{repo.description||'No description'}</p><div className='stats'>★ {repo.stargazers_count} · Forks {repo.forks_count} · {repo.private?'Private':'Public'}</div></div>}
