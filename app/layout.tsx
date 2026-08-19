@@ -1,0 +1,1 @@
+import './globals.css';import {AppProvider} from '@/components/providers/AppProvider';import {Header} from '@/components/layout/Header';export default function RootLayout({children}:{children:React.ReactNode}){return <html lang='id'><body><AppProvider><Header/>{children}</AppProvider></body></html>}
