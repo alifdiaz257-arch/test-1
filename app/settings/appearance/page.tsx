@@ -1,0 +1,1 @@
+'use client';import {useTheme} from '@/components/providers/ThemeProvider';export default function Appearance(){const t=useTheme();return <main className='page'><h1>Appearance</h1><div className='panel'><h2>Theme</h2><p>{t.dark?'Dark':'Light'} mode</p><button className='btn btn-primary' onClick={t.toggle}>Toggle theme</button></div></main>}
