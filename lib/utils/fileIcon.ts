@@ -1,0 +1,1 @@
+export const fileIcon=(n:string)=>{const e=n.split('.').pop()?.toLowerCase();return ['ts','tsx','js','jsx'].includes(e||'')?'◈':['json','yaml','yml'].includes(e||'')?'{}':['png','jpg','jpeg','gif','svg','webp'].includes(e||'')?'▧':'□'};
