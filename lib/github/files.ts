@@ -1,0 +1,1 @@
+import {githubFetch} from './server';export const getTree=(o:string,r:string,b:string)=>githubFetch(`/repos/${o}/${r}/git/trees/${encodeURIComponent(b)}?recursive=1`);export const getFile=(o:string,r:string,p:string,b:string)=>githubFetch(`/repos/${o}/${r}/contents/${p}?ref=${encodeURIComponent(b)}`);
