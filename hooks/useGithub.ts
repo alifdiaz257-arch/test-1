@@ -1,0 +1,1 @@
+'use client';import {useEffect,useState} from 'react';export function useGithub(){const[user,setUser]=useState<any>();useEffect(()=>{fetch('/api/github/user').then(r=>r.json()).then(setUser)},[]);return{user}}
