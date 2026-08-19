@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {getSession} from '@/lib/auth/session';export async function GET(){const s=await getSession();return NextResponse.json({authenticated:!!s,user:s?{login:s.login,name:s.name,avatar_url:s.avatar_url}:null})}
