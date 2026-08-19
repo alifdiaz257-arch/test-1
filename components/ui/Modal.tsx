@@ -1,0 +1,1 @@
+'use client';export function Modal({open,onClose,title,children}:any){if(!open)return null;return <div className='modal-backdrop' onMouseDown={onClose}><div className='modal' onMouseDown={e=>e.stopPropagation()}><header><b>{title}</b><button onClick={onClose}>×</button></header>{children}</div></div>}
