@@ -1,0 +1,1 @@
+import {NextRequest,NextResponse} from 'next/server';import {getBranches} from '@/lib/github/branches';export async function GET(q:NextRequest){const o=q.nextUrl.searchParams.get('owner'),r=q.nextUrl.searchParams.get('repo');try{return NextResponse.json(await getBranches(o!,r!))}catch(e:any){return NextResponse.json({error:e.message},{status:500})}}
