@@ -1,0 +1,1 @@
+import Link from 'next/link';export function RepositoryCard({repo}:any){const owner=repo.full_name.split('/')[0];return <Link className='repo-card' href={`/repositories/${owner}/${repo.name}`}><h3>{repo.name}</h3><p>{repo.description||'No description'}</p><small>{repo.private?'Private':'Public'} · {repo.language||'Unknown'}</small></Link>}
