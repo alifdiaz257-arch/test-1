@@ -1,0 +1,1 @@
+import {redirect} from 'next/navigation';import {getSession} from '@/lib/auth/session';import {RepositoryList} from '@/components/github/RepositoryList';export default async function Repositories(){if(!(await getSession()))redirect('/login');return <main className='page'><h1>Repositories</h1><p className='muted'>Your GitHub repositories</p><RepositoryList/></main>}
