@@ -1,0 +1,1 @@
+export const EditorToolbar=({onSave,onCreate,onDelete,disabled}:any)=><div className='toolbar'><button className='btn btn-primary' disabled={disabled} onClick={onSave}>Commit changes</button><button className='btn btn-secondary' onClick={onCreate}>New file</button><button className='btn btn-danger' disabled={disabled} onClick={onDelete}>Delete</button></div>;
