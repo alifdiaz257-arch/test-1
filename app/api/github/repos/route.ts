@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {getRepos} from '@/lib/github/repositories';export async function GET(){try{return NextResponse.json(await getRepos())}catch(e:any){return NextResponse.json({error:e.message},{status:401})}}
