@@ -1,0 +1,1 @@
+import JSZip from 'jszip';export async function createZip(files:{path:string;content:string}[]){const z=new JSZip();for(const f of files)z.file(f.path,f.content);return z.generateAsync({type:'blob'})}
