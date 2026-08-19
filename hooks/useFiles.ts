@@ -1,0 +1,1 @@
+'use client';import {useEffect,useState} from 'react';export function useFiles(o:string,r:string,b:string){const[d,setD]=useState<any[]>([]);useEffect(()=>{if(o&&r)fetch(`/api/github/repo/tree?owner=${o}&repo=${r}&branch=${b}`).then(x=>x.json()).then(x=>setD(x.tree||[]))},[o,r,b]);return d}
